@@ -8,18 +8,20 @@ driver = webdriver.Chrome()
 # 前往網站
 driver.get("https://www.nstc.gov.tw/")
 # 登入科技部網站
-driver.find_element(By.XPATH,'/html/body/div[3]/div[3]/div[3]/div/div/form/input[1]').send_keys("crazy152530")
-driver.find_element(By.XPATH,'/html/body/div[3]/div[3]/div[3]/div/div/form/input[2]').send_keys("FriEND4577")
+account = "輸入您的帳號"
+password = "輸入您的密碼"
+driver.find_element(By.XPATH,'/html/body/div[3]/div[3]/div[3]/div/div/form/input[1]').send_keys(account)
+driver.find_element(By.XPATH,'/html/body/div[3]/div[3]/div[3]/div/div/form/input[2]').send_keys(password)
 driver.find_element(By.XPATH,'/html/body/div[3]/div[3]/div[3]/div/div/form/button').click()
 # 自動填入學術著作資料
-authorName = "Y.-N. Chiu, S.-Y. Yen, C.-Y. Yu, and S. -K. Lin*"
+authorName = "輸入作者名稱"
 firstAuthor = 'input[name="firstAuthorYn"][value="1"]'   # 本人為第一作者："1"=是 / "0"=否
 crsAuthor = 'input[name="crsAuthorYn"][value="0"]'   # 本人為通訊作者："1"=是 / "0"=否
-pubYear = "2022"
-pubMonth = "07"
-paperTitle = "Ab initio exploration of alloying elements for stabilizing η’ nanoprecipitates in Al-Zn-Mg alloys"
+pubYear = "發表年分"
+pubMonth = "發表月份"
+paperTitle = "發表標題"
 language = "外文"
-conferenceName = "TMS2023"
+conferenceName = "發表研討會名稱"
 isAccepted = "1" # 1=已接受 / 0=已發表
 confPlace = "USA, CA"
 vipYn = "Y" # 是否為國際性重要學術會議：Y=是 / N=否
